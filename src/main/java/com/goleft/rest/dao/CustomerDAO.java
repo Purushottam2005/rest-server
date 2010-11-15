@@ -50,14 +50,15 @@ public class CustomerDAO
 
     public List<Customer> getCustomers() {
         SQLBuilder sql = new SQLBuilder();
+        sql.addSelect("customerId");
         sql.addSelect("firstName");
         sql.addSelect("lastName");
         sql.addSelect("email");
         sql.addFrom("customer");
         sql.addOrderBy("email");
 
-        log.debug("CustomerDAO.getCustomers sql=%s", sql);
-        return db.query(sql.toString(), rowMapper);
+        log.debug("CustomerDAO.getCustomers sql=%s", sql.buildSelect());
+        return db.query(sql.buildSelect(), rowMapper);
     }
 
     public Customer get(long id) {

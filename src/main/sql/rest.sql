@@ -1,7 +1,7 @@
 -- --------------------------------------------------------------------
 -- vim: set expandtab ts=4 sw=4 syntax=sql:
 --
--- rest-server.sql
+-- rest.sql
 --
 -- Sample database for the rest-server template
 --
@@ -20,7 +20,7 @@
 select now(), 'creating table customer...';
 drop table if exists customer;
 create table customer (
-    customerId int not null auto increment,
+    customerId int not null auto_increment,
     firstName varchar(255) null default '',
     lastName varchar(255) null default '',
     email varchar(255) null default '',
@@ -34,7 +34,7 @@ select now(), concat('rows inserted/updated: ', row_count());
 select now(), 'creating table address...';
 drop table if exists address;
 create table address (
-    addressId int not null auto increment,
+    addressId int not null auto_increment,
     customerId int not null,
     street varchar(255) null default '',
     city varchar(255) null default '',

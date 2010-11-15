@@ -37,7 +37,7 @@ import com.goleft.rest.entity.Customer;
 import javax.ws.rs.*;
 import java.util.List;
 
-@Path("/rest")
+@Path("/service")
 @Produces("application/json")
 @Consumes("application/json")
 public interface RESTService {
