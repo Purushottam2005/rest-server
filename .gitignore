@@ -1,0 +1,14 @@
+# old skool
+.svn
+
+# IntelliJ stuff
+.idea
+*.iws
+
+# generated stuff
+target
+
+# osx noise
+.DS_Store
+profile
+
