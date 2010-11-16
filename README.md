@@ -17,7 +17,7 @@ short overview of the files and locations
 <pre>
 src
 └── main
-    ├── java                    <-- java files live here
+    ├── java                    &lt;-- java files live here
     │   └── com
     │       └── goleft
     │           └── rest
@@ -26,10 +26,10 @@ src
     │               ├── log
     │               ├── service
     │               └── util
-    ├── resources               <-- config files live here
-    ├── sql                     <-- sql files live here
-    └── webapp                  <-- HTML files live here
-        └── WEB-INF             <-- Spring config files live here 
+    ├── resources               &lt;-- config files live here
+    ├── sql                     &lt;-- sql files live here
+    └── webapp                  &lt;-- HTML files live here
+        └── WEB-INF             &lt;-- Spring config files live here 
 </pre>
 
 ## MySQL setup
