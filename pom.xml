@@ -40,6 +40,17 @@
     <name>rest-server</name>
     <url>http://maven.apache.org</url>
 
+    <repositories>
+        <repository>
+            <id>UK</id>
+            <url>http://uk.maven.org/maven2</url>
+        </repository>
+        <repository>
+            <id>jboss</id>
+            <url>http://repository.jboss.org/maven2</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <!-- compile and deploy dependencies -->
         <dependency>
@@ -64,7 +75,7 @@
         </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
-            <artifactId>jaxrs-api</artifactId>
+            <artifactId>resteasy-jaxrs</artifactId>
             <version>1.2.GA</version>
         </dependency>
         <dependency>
@@ -140,7 +151,7 @@
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>maven-jetty-plugin</artifactId>
-                <version>6.1.22</version>
+                <version>6.1.26</version>
                 <configuration>
                     <contextPath>/rest</contextPath>
                     <scanIntervalSeconds>3</scanIntervalSeconds>

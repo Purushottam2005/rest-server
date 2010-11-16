@@ -11,8 +11,8 @@ cup of tea you can replace it with something else of course.
 
 ## Architecture
 
-If you have worked with Spring before then the architecture is quite straight forward. For the others I've compiled a
-short rundown on the files.
+If you have worked with Spring before then the architecture should look familiar. For the others I've compiled a
+short overview of the files and locations
 
 <pre>
 src
@@ -57,7 +57,7 @@ As the final step you use __maven__ to download the depedencies and build the .w
 
 Run the following command to download all dependencies and to build the service.
 <pre>
-mvn package
+mvn clean package
 </pre>
 
 Then run this command to run the service.
