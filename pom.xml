@@ -75,18 +75,18 @@
         </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-jaxrs</artifactId>
-            <version>1.2.GA</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-jackson-provider</artifactId>
-            <version>1.2.GA</version>
+            <version>1.2.1.GA</version>
         </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-spring</artifactId>
-            <version>1.2.GA</version>
+            <version>1.2.1.GA</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>2.5.6.SEC01</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -97,6 +97,20 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>2.5.6.SEC01</version>
+        </dependency>
+
+        <!-- runtime dependencies -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>2.5.6.SEC01</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+            <version>2.1_3</version>
+            <scope>runtime</scope>
         </dependency>
 
         <!-- test dependencies -->

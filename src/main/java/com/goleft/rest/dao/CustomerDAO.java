@@ -34,6 +34,7 @@ package com.goleft.rest.dao;
 import com.goleft.rest.entity.Customer;
 import com.goleft.rest.util.SQLBuilder;
 import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -61,10 +62,61 @@ public class CustomerDAO
         return db.query(sql.buildSelect(), rowMapper);
     }
 
+    // --- OTHER METHODS ---
+
+    @Transactional(readOnly = false)
+    public long add(Customer c) {
+        log.debug("CustomerDAO.add()");        
+        SQLBuilder sql = new SQLBuilder();
+        
+        // set table
+        sql.setInsert("customer");
+        
+        // set values
+        sql.addInsertParam(c.getCustomerId(), "customerId");
+        sql.addInsertParam(c.getFirstName(), "firstName");
+        sql.addInsertParam(c.getLastName(), "lastName");
+        sql.addInsertParam(c.getEmail(), "email");
+        
+        // exec
+        log.debug(sql.buildInsert());
+        if (db.update(sql.buildInsert(), sql.values()) > 0) {
+            return lastInsertId();
+        }
+        
+        return -1;
+    }
+    
+    public void delete(long id) {
+        log.debug("CustomerDAO.delete(%d)", id);
+        String sql = "delete from customer where customerId = ? ";
+        db.update(sql, id);
+    }
+    
     public Customer get(long id) {
         log.debug("CustomerDAO.get(%d)", id);
         String sql = "select * from customer where customerId = ? ";
         return getFirst(db.query(sql, rowMapper, id));
+    }
+    
+    @Transactional(readOnly = false)
+    public void update(Customer c) {
+        log.debug("CustomerDAO.add()");        
+        SQLBuilder sql = new SQLBuilder();
+        
+        // set table
+        sql.addUpdate("customer");
+        
+        // set values
+        sql.addUpdateParam(c.getFirstName(), "firstName");
+        sql.addUpdateParam(c.getLastName(), "lastName");
+        sql.addUpdateParam(c.getEmail(), "email");
+        
+        // where clause
+        sql.addWhereParam(c.getCustomerId(), "customerId");
+        
+        // exec
+        updateRow(sql.buildUpdate(), sql.values());
     }
 
     // --- INNER CLASSES ---

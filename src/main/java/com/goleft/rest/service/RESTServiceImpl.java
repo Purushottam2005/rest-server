@@ -40,6 +40,7 @@ import com.goleft.rest.log.ServiceLoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.PathParam;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 public class RESTServiceImpl
@@ -55,10 +56,39 @@ public class RESTServiceImpl
     @Autowired
     private CustomerDAO customerDAO;
 
-
     // --- INTERFACE METHODS ---
 
     // --- Interface RESTService ---
+
+    /**
+     * Checks for a null value and returns 404 for null.
+     * Otherwise t is returned.
+     */
+    static <T> Object checkNull(T t) {
+        if (t == null)
+            return Response.status(404).build();
+        return t;
+    }
+
+    @Override
+    public Customer addCustomer(Customer c) {
+        log.debug("RESTService.addCustomer(%s)", c.getEmail());
+        c.setCustomerId(null);
+        long customerId = customerDAO.add(c);
+        return (customerId > 0) ? customerDAO.get(customerId) : null;
+    }
+
+    @Override
+    public void deleteCustomer(@PathParam("id") Long customerId) {
+        log.debug("RESTService.deleteCustomer(%d)", customerId);
+        customerDAO.delete(customerId);
+    }
+
+    @Override
+    public List<Address> getAddressesForCustomer(@PathParam("id") Long customerId) {
+        log.debug("RESTService.getAddressesForCustomer(%d)", customerId);
+        return addressDAO.getForCustomer(customerId);
+    }
 
     @Override
     public List<Customer> getAllCustomers() {
@@ -67,14 +97,15 @@ public class RESTServiceImpl
     }
 
     @Override
-    public Customer getCustomer(@PathParam("id") Long customerId) {
+    public Object getCustomer(@PathParam("id") Long customerId) {
         log.debug("RESTService.getCustomer(%d)", customerId);
-        return customerDAO.get(customerId);
+        return checkNull(customerDAO.get(customerId));
     }
 
     @Override
-    public List<Address> getAddressesForCustomer(@PathParam("id") Long customerId) {
-        log.debug("RESTService.getAddressesForCustomer(%d)", customerId);
-        return addressDAO.getForCustomer(customerId);
+    public void updateCustomer(@PathParam("id") Long customerId, Customer c) {
+        log.debug("RESTService.updateCustomer(%d)", customerId);
+        c.setCustomerId(customerId);
+        customerDAO.update(c);
     }
 }

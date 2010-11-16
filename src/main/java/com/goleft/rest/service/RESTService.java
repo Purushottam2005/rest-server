@@ -42,16 +42,30 @@ import java.util.List;
 @Consumes("application/json")
 public interface RESTService {
 
+    // --- OTHER METHODS ---
+
+    @POST
+    @Path("/customer")
+    public Customer addCustomer(Customer c);
+
+    @DELETE
+    @Path("/customer/{id}")
+    public void deleteCustomer(@PathParam("id") Long customerId);
+
+    @GET
+    @Path("/customer/{id}/address")
+    public List<Address> getAddressesForCustomer(@PathParam("id") Long customerId);
+
     @GET
     @Path("/customer")
     public List<Customer> getAllCustomers();
 
     @GET
     @Path("/customer/{id}")
-    public Customer getCustomer(@PathParam("id") Long customerId);
+    public Object getCustomer(@PathParam("id") Long customerId);
 
-    @GET
-    @Path("/customer/{id}/address")
-    public List<Address> getAddressesForCustomer(@PathParam("id") Long customerId);
+    @PUT
+    @Path("/customer/{id}")
+    public void updateCustomer(@PathParam("id") Long customerId, Customer c);
 }
 

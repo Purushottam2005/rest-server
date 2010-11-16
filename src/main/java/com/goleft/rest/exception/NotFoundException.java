@@ -29,53 +29,21 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.goleft.rest.entity;
+package com.goleft.rest.exception;
 
-import org.codehaus.jackson.annotate.JsonWriteNullProperties;
+import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.core.Response;
 
-import javax.xml.bind.annotation.XmlRootElement;
+public class NotFoundException extends WebApplicationException {
+     public NotFoundException() {
+         super(Response.status(404).type("text/plain").build());
+     }
 
-@JsonWriteNullProperties(value = false)
-public class Customer {
-
-    // --- FIELDS ---
-
-    private Long customerId;
-    private String firstName;
-    private String lastName;
-    private String email;
-
-    // --- GETTER / SETTER METHODS ---
-
-    public Long getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(Long customerId) {
-        this.customerId = customerId;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+     public NotFoundException(String message, Object... args) {
+         super(Response
+                 .status(404)
+                 .header("X-Error",String.format(message, args))
+                 .type("text/plain")
+                 .build());
+     }
 }

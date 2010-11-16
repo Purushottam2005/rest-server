@@ -29,48 +29,14 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.goleft.rest.entity;
+package com.goleft.rest.exception;
 
-public class Response {
+import javax.ws.rs.core.Response;
+import javax.ws.rs.ext.ExceptionMapper;
 
-    // --- FIELDS ---
-
-    private String dateOfLastUpdate;
-    private Object data;
-    private int status;
-    private String message;
-
-    // --- GETTER / SETTER METHODS ---
-
-    public Object getData() {
-        return data;
-    }
-
-    public void setData(Object data) {
-        this.data = data;
-    }
-
-    public String getDateOfLastUpdate() {
-        return dateOfLastUpdate;
-    }
-
-    public void setDateOfLastUpdate(String dateOfLastUpdate) {
-        this.dateOfLastUpdate = dateOfLastUpdate;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
+public class NotFoundExceptionMapper implements ExceptionMapper<NotFoundException> {
+    @Override
+    public Response toResponse(NotFoundException e) {
+        return Response.status(404).build();
     }
 }

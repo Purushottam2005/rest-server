@@ -31,12 +31,17 @@
 
 package com.goleft.rest.dao;
 
+import com.goleft.rest.exception.NotFoundException;
 import com.goleft.rest.log.ServiceLogger;
 import com.goleft.rest.log.ServiceLoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.sql.DataSource;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -80,4 +85,21 @@ public abstract class BaseDAO {
 
         return list.get(0);
     }
+
+    @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
+    public long lastInsertId() {
+        return db.queryForLong("select last_insert_id()");
+    }
+
+    public Date now() {
+        return Calendar.getInstance().getTime();
+    }
+
+    protected void updateRow(String sql, Object... args) {
+         int recordsUpdated = db.update(sql, args);
+         if (recordsUpdated == 0) {
+             throw new NotFoundException();
+         }
+     }
+            
 }

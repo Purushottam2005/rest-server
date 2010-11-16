@@ -21,10 +21,16 @@
           <element id="directory" name="lib">
             <element id="library" level="project" name="Maven: c3p0:c3p0:0.9.1.2" />
             <element id="library" level="project" name="Maven: log4j:log4j:1.2.14" />
-            <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.0.8" />
+            <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.13" />
             <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.5" />
-            <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-jaxrs:1.2.GA" />
-            <element id="library" level="project" name="Maven: org.jboss.resteasy:jaxrs-api:1.2.GA" />
+            <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-jackson-provider:1.2.1.GA" />
+            <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.3.0" />
+            <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.3.0" />
+            <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-jaxrs:1.3.0" />
+            <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-xc:1.3.0" />
+            <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-spring:1.2.1.GA" />
+            <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-jaxrs:1.2.1.GA" />
+            <element id="library" level="project" name="Maven: org.jboss.resteasy:jaxrs-api:1.2.1.GA" />
             <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.5.8" />
             <element id="library" level="project" name="Maven: org.slf4j:slf4j-simple:1.5.8" />
             <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.5.8" />
@@ -37,28 +43,25 @@
             <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.0" />
             <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.0.1" />
             <element id="library" level="project" name="Maven: net.jcip:jcip-annotations:1.0" />
-            <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-jackson-provider:1.2.GA" />
-            <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.0.1" />
-            <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.0.1" />
-            <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-jaxrs:1.0.1" />
-            <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-spring:1.2.GA" />
-            <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-jettison-provider:1.2.GA" />
-            <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-jaxb-provider:1.2.GA" />
-            <element id="library" level="project" name="Maven: com.sun.xml.bind:jaxb-impl:2.1.10" />
+            <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-jettison-provider:1.2.1.GA" />
+            <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-jaxb-provider:1.2.1.GA" />
+            <element id="library" level="project" name="Maven: com.sun.xml.bind:jaxb-impl:2.1.12" />
             <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.1" />
             <element id="library" level="project" name="Maven: javax.xml.stream:stax-api:1.0" />
             <element id="library" level="project" name="Maven: com.sun.xml.stream:sjsxp:1.0.1" />
             <element id="library" level="project" name="Maven: org.codehaus.jettison:jettison:1.1" />
-            <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:2.5.6.SEC01" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-tx:2.5.6.SEC01" />
             <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.1" />
             <element id="library" level="project" name="Maven: org.springframework:spring-beans:2.5.6.SEC01" />
             <element id="library" level="project" name="Maven: org.springframework:spring-core:2.5.6.SEC01" />
             <element id="library" level="project" name="Maven: org.springframework:spring-context:2.5.6.SEC01" />
             <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
-            <element id="library" level="project" name="Maven: org.springframework:spring-tx:2.5.6.SEC01" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:2.5.6.SEC01" />
             <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:2.5.6.SEC01" />
             <element id="library" level="project" name="Maven: org.springframework:spring-context-support:2.5.6.SEC01" />
             <element id="library" level="project" name="Maven: org.springframework:spring-web:2.5.6.SEC01" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-aop:2.5.6.SEC01" />
+            <element id="library" level="project" name="Maven: cglib:cglib-nodep:2.1_3" />
             <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
           </element>
         </element>
@@ -377,17 +380,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.14/log4j-1.2.14-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: mysql:mysql-connector-java:5.0.8">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.0.8/mysql-connector-java-5.0.8.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.0.8/mysql-connector-java-5.0.8-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.0.8/mysql-connector-java-5.0.8-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: commons-lang:commons-lang:2.5">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.5/commons-lang-2.5.jar!/" />
@@ -397,17 +389,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.5/commons-lang-2.5-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.jboss.resteasy:resteasy-spring:1.2.GA">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-spring/1.2.GA/resteasy-spring-1.2.GA.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-spring/1.2.GA/resteasy-spring-1.2.GA-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-spring/1.2.GA/resteasy-spring-1.2.GA-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.springframework:spring-jdbc:2.5.6.SEC01">
@@ -553,28 +534,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.jboss.resteasy:resteasy-jaxrs:1.2.GA">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jaxrs/1.2.GA/resteasy-jaxrs-1.2.GA.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jaxrs/1.2.GA/resteasy-jaxrs-1.2.GA-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jaxrs/1.2.GA/resteasy-jaxrs-1.2.GA-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.jboss.resteasy:jaxrs-api:1.2.GA">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/jaxrs-api/1.2.GA/jaxrs-api-1.2.GA.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/jaxrs-api/1.2.GA/jaxrs-api-1.2.GA-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/jaxrs-api/1.2.GA/jaxrs-api-1.2.GA-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: org.slf4j:slf4j-api:1.5.8">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.5.8/slf4j-api-1.5.8.jar!/" />
@@ -696,50 +655,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.jboss.resteasy:resteasy-jackson-provider:1.2.GA">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jackson-provider/1.2.GA/resteasy-jackson-provider-1.2.GA.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jackson-provider/1.2.GA/resteasy-jackson-provider-1.2.GA-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jackson-provider/1.2.GA/resteasy-jackson-provider-1.2.GA-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.jboss.resteasy:resteasy-jettison-provider:1.2.GA">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jettison-provider/1.2.GA/resteasy-jettison-provider-1.2.GA.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jettison-provider/1.2.GA/resteasy-jettison-provider-1.2.GA-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jettison-provider/1.2.GA/resteasy-jettison-provider-1.2.GA-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.jboss.resteasy:resteasy-jaxb-provider:1.2.GA">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jaxb-provider/1.2.GA/resteasy-jaxb-provider-1.2.GA.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jaxb-provider/1.2.GA/resteasy-jaxb-provider-1.2.GA-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jaxb-provider/1.2.GA/resteasy-jaxb-provider-1.2.GA-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: com.sun.xml.bind:jaxb-impl:2.1.10">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.1.10/jaxb-impl-2.1.10.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.1.10/jaxb-impl-2.1.10-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.1.10/jaxb-impl-2.1.10-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: javax.xml.bind:jaxb-api:2.1">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/javax/xml/bind/jaxb-api/2.1/jaxb-api-2.1.jar!/" />
@@ -784,39 +699,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jettison/jettison/1.1/jettison-1.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.codehaus.jackson:jackson-core-asl:1.0.1">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-core-asl/1.0.1/jackson-core-asl-1.0.1.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-core-asl/1.0.1/jackson-core-asl-1.0.1-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-core-asl/1.0.1/jackson-core-asl-1.0.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.0.1">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-mapper-asl/1.0.1/jackson-mapper-asl-1.0.1.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-mapper-asl/1.0.1/jackson-mapper-asl-1.0.1-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-mapper-asl/1.0.1/jackson-mapper-asl-1.0.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.codehaus.jackson:jackson-jaxrs:1.0.1">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-jaxrs/1.0.1/jackson-jaxrs-1.0.1.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-jaxrs/1.0.1/jackson-jaxrs-1.0.1-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-jaxrs/1.0.1/jackson-jaxrs-1.0.1-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: org.apache.httpcomponents:httpcore:4.0.1">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar!/" />
@@ -826,6 +708,160 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: mysql:mysql-connector-java:5.1.13">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.13/mysql-connector-java-5.1.13.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.13/mysql-connector-java-5.1.13-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.13/mysql-connector-java-5.1.13-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.jboss.resteasy:resteasy-jaxrs:1.2.1.GA">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jaxrs/1.2.1.GA/resteasy-jaxrs-1.2.1.GA.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jaxrs/1.2.1.GA/resteasy-jaxrs-1.2.1.GA-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jaxrs/1.2.1.GA/resteasy-jaxrs-1.2.1.GA-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.jboss.resteasy:jaxrs-api:1.2.1.GA">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/jaxrs-api/1.2.1.GA/jaxrs-api-1.2.1.GA.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/jaxrs-api/1.2.1.GA/jaxrs-api-1.2.1.GA-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/jaxrs-api/1.2.1.GA/jaxrs-api-1.2.1.GA-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.jboss.resteasy:resteasy-jackson-provider:1.2.1.GA">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jackson-provider/1.2.1.GA/resteasy-jackson-provider-1.2.1.GA.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jackson-provider/1.2.1.GA/resteasy-jackson-provider-1.2.1.GA-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jackson-provider/1.2.1.GA/resteasy-jackson-provider-1.2.1.GA-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.jackson:jackson-core-asl:1.3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-core-asl/1.3.0/jackson-core-asl-1.3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-core-asl/1.3.0/jackson-core-asl-1.3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-core-asl/1.3.0/jackson-core-asl-1.3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-mapper-asl/1.3.0/jackson-mapper-asl-1.3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-mapper-asl/1.3.0/jackson-mapper-asl-1.3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-mapper-asl/1.3.0/jackson-mapper-asl-1.3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.jackson:jackson-jaxrs:1.3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-jaxrs/1.3.0/jackson-jaxrs-1.3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-jaxrs/1.3.0/jackson-jaxrs-1.3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-jaxrs/1.3.0/jackson-jaxrs-1.3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.jackson:jackson-xc:1.3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-xc/1.3.0/jackson-xc-1.3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-xc/1.3.0/jackson-xc-1.3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-xc/1.3.0/jackson-xc-1.3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.jboss.resteasy:resteasy-spring:1.2.1.GA">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-spring/1.2.1.GA/resteasy-spring-1.2.1.GA.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-spring/1.2.1.GA/resteasy-spring-1.2.1.GA-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-spring/1.2.1.GA/resteasy-spring-1.2.1.GA-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.jboss.resteasy:resteasy-jettison-provider:1.2.1.GA">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jettison-provider/1.2.1.GA/resteasy-jettison-provider-1.2.1.GA.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jettison-provider/1.2.1.GA/resteasy-jettison-provider-1.2.1.GA-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jettison-provider/1.2.1.GA/resteasy-jettison-provider-1.2.1.GA-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.jboss.resteasy:resteasy-jaxb-provider:1.2.1.GA">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jaxb-provider/1.2.1.GA/resteasy-jaxb-provider-1.2.1.GA.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jaxb-provider/1.2.1.GA/resteasy-jaxb-provider-1.2.1.GA-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/resteasy/resteasy-jaxb-provider/1.2.1.GA/resteasy-jaxb-provider-1.2.1.GA-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.xml.bind:jaxb-impl:2.1.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.1.12/jaxb-impl-2.1.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.1.12/jaxb-impl-2.1.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.1.12/jaxb-impl-2.1.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-aop:2.5.6.SEC01">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/2.5.6.SEC01/spring-aop-2.5.6.SEC01.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/2.5.6.SEC01/spring-aop-2.5.6.SEC01-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/2.5.6.SEC01/spring-aop-2.5.6.SEC01-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: cglib:cglib-nodep:2.1_3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/cglib/cglib-nodep/2.1_3/cglib-nodep-2.1_3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/cglib/cglib-nodep/2.1_3/cglib-nodep-2.1_3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/cglib/cglib-nodep/2.1_3/cglib-nodep-2.1_3-sources.jar!/" />
       </SOURCES>
     </library>
   </component>
