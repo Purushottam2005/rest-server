@@ -49,7 +49,7 @@ mysql> quit;
 
 Then load the database with
 <pre>
-mysql -h localhost -urest -prest rest < src/main/sql/rest.sql
+mysql -h localhost -urest -prest rest &lt; src/main/sql/rest.sql
 </pre>
 
 ## Project setup
