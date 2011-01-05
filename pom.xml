@@ -7,15 +7,15 @@
   ~ modification, are permitted provided that the following conditions are met:
   ~
   ~ * Redistributions of source code must retain the above copyright notice,
-  ~    this list of conditions and the following disclaimer.
+  ~ this list of conditions and the following disclaimer.
   ~
   ~ * Redistributions in binary form must reproduce the above copyright notice,
-  ~    this list of conditions and the following disclaimer in the documentation
-  ~    and/or other materials provided with the distribution.
+  ~ this list of conditions and the following disclaimer in the documentation
+  ~ and/or other materials provided with the distribution.
   ~
   ~ * Neither the name of Frank Schroeder nor the names of its contributors may
-  ~    be used to endorse or promote products derived from this software without
-  ~    specific prior written permission.
+  ~ be used to endorse or promote products derived from this software without
+  ~ specific prior written permission.
   ~
   ~ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
   ~ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
@@ -31,7 +31,8 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.go-left</groupId>
     <artifactId>rest-server</artifactId>
@@ -42,74 +43,91 @@
 
     <repositories>
         <repository>
-            <id>UK</id>
-            <url>http://uk.maven.org/maven2</url>
+            <id>Maven Central</id>
+            <url>http://repo2.maven.org/maven2/</url>
         </repository>
         <repository>
-            <id>jboss</id>
-            <url>http://repository.jboss.org/maven2</url>
+            <id>public-jboss</id>
+            <url>https://repository.jboss.org/nexus/content/groups/public-jboss</url>
         </repository>
     </repositories>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- versions -->
+        <c3p0.version>0.9.1.2</c3p0.version>
+        <cglib.version>2.1_3</cglib.version>
+        <commons-lang.version>2.5</commons-lang.version>
+        <jetty.version>6.1.26</jetty.version>
+        <junit.version>4.8.2</junit.version>
+        <log4j.version>1.2.14</log4j.version>
+        <!-- 1.2.15 or higher won't work -->
+        <mysql-connector.version>5.1.14</mysql-connector.version>
+        <resteasy.version>2.1.0.GA</resteasy.version>
+        <servlet-api.version>2.5</servlet-api.version>
+        <spring.version>3.0.5.RELEASE</spring.version>
+    </properties>
 
     <dependencies>
         <!-- compile and deploy dependencies -->
         <dependency>
             <groupId>c3p0</groupId>
             <artifactId>c3p0</artifactId>
-            <version>0.9.1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.14</version>     <!-- 1.2.15 and higher wont work -->
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.13</version>
+            <version>${c3p0.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
-            <version>2.5</version>
+            <version>${commons-lang.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-jackson-provider</artifactId>
-            <version>1.2.1.GA</version>
+            <version>${resteasy.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-spring</artifactId>
-            <version>1.2.1.GA</version>
+            <version>${resteasy.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>2.5.6.SEC01</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>2.5.6.SEC01</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>2.5.6.SEC01</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <!-- runtime dependencies -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>2.5.6.SEC01</version>
+            <version>${spring.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib-nodep</artifactId>
-            <version>2.1_3</version>
+            <version>${cglib.version}</version>
             <scope>runtime</scope>
         </dependency>
 
@@ -117,19 +135,13 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.4</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>2.5.6.SEC01</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
+            <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -137,7 +149,7 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
+            <version>${servlet-api.version}</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
@@ -155,6 +167,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
@@ -165,7 +178,7 @@
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>maven-jetty-plugin</artifactId>
-                <version>6.1.26</version>
+                <version>${jetty.version}</version>
                 <configuration>
                     <contextPath>/rest</contextPath>
                     <scanIntervalSeconds>3</scanIntervalSeconds>

@@ -81,4 +81,8 @@
     <bean id="customerDAO" class="com.goleft.rest.dao.CustomerDAO">
         <property name="dataSource" ref="dataSource"/>
     </bean>
+
+    <!-- REST service classes -->
+    <bean id="restService" class="com.goleft.rest.service.RESTServiceImpl"/>
+
 </beans>
